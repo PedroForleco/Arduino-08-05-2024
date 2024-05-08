@@ -1,0 +1,29 @@
+int pin1 = 8, pin2 = 9, pin3 = 10, pin4 = 11;
+int num = 0;
+
+void setup()
+{
+  pinMode(pin1, OUTPUT);
+  pinMode(pin2, OUTPUT);
+  pinMode(pin3, OUTPUT);
+  pinMode(pin4, OUTPUT);
+}
+
+void display(int num)
+{
+  digitalWrite(pin1, bitRead(num, 0));
+  digitalWrite(pin2, bitRead(num, 1));
+  digitalWrite(pin3, bitRead(num, 2));
+  digitalWrite(pin4, bitRead(num, 3));
+}
+
+void loop()
+{
+  display(num);
+ 
+  num++;
+ 
+  delay(500);
+ 
+  if (num > 9) num = 0;
+}
