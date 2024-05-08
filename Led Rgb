@@ -1,0 +1,30 @@
+// C++ code
+//
+
+int Vermelho = 13;
+int Azul = 12;
+int Verde = 11;
+void setup()
+{
+  pinMode(Vermelho, OUTPUT);
+  pinMode(Azul, OUTPUT);
+  pinMode(Verde, OUTPUT);
+  
+}
+
+void loop()
+{
+  digitalWrite(Vermelho, LOW);
+  digitalWrite(Azul, LOW);
+  digitalWrite(Verde, HIGH);
+  delay (4000);
+  digitalWrite(Vermelho, HIGH);
+  digitalWrite(Azul, LOW);
+  digitalWrite(Verde, HIGH);
+  delay (2000);
+  digitalWrite(Vermelho, HIGH);
+  digitalWrite(Azul, LOW);
+  digitalWrite(Verde, LOW);
+  delay (4000);
+
+}
